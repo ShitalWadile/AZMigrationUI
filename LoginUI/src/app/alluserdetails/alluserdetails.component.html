@@ -1,0 +1,32 @@
+
+<div class="table">
+    <h1 class="admin">User Data</h1>
+    <table class="table" *ngIf="alluser">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let app of alluser">
+                <td>{{ app.loginId}}</td>
+                <td>{{ app.name}}</td>
+                <td>{{ app.emailId}}</td>
+                <td>{{ app.role}}</td>
+
+                <td>
+                   <button class="btn btn-danger" type="button" >Delete</button>
+                </td>
+                <!-- <td><button type="button"  class="btn btn-danger"
+                    (click)="deleteUser(app.loginId)">Delete</button>
+                </td>   -->
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <button class="btn btn-primary" routerLink="/admin">Back</button>

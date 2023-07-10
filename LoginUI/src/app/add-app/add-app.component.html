@@ -1,0 +1,48 @@
+<div class="card">
+      <div>
+        <h1>Add Application Details</h1><hr>
+       
+      </div>
+      <div class="form">
+            <form #applicationsForm="ngForm" (ngSubmit)="addApplicationData()">
+
+             
+              <div class="mb-3">
+                <label class="form-label">C_Name</label>
+                <input type="text"   class="form-control" placeholder="Application Name"
+                 name="C_Name" [(ngModel)]="addApp.C_Name">
+
+              </div>
+
+           
+            <div class="mb-3">
+                <label class="form-label">Application Name</label>
+                <input type="text"   class="form-control" placeholder="Application Name"
+                 name="Application_Name" [(ngModel)]="addApp.Application_Name" >
+
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Server Info</label>
+                <input type="text"  class="form-control" placeholder="Server Info"
+                 name="ServerInfo" [(ngModel)]="addApp.ServerInfo">
+
+              </div>
+
+
+              <div class="mb-3">
+                <label class="form-label">Port Info</label>
+                <input type="text"  class="form-control" placeholder="Port Info"
+                 name="PortInfo" [(ngModel)]="addApp.PortInfo">
+
+              </div>
+              <div class="modal-footer">
+            <button  type="submit" class="btn btn-primary">ADD</button>&nbsp;
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+          </form>
+          <!--Modal Form Ends-->
+      </div>
+    </div>
+    
+

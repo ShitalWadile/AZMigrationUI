@@ -1,0 +1,23 @@
+<h1>Delete Application</h1>
+<form>
+<label for="clientId">Client ID:</label>
+<input type="number" id="clientId" name="clientId" [(ngModel)]="C_Id" required>
+<button type="button" (click)="getApplicationById()">Get Details</button>
+</form>
+
+ 
+
+
+<!-- Other template content -->
+
+<div *ngIf="applicationDetails$ | async as applicationDetails">
+  <!-- Display application details -->
+  <p><strong>Application Name:</strong> {{ applicationDetails.Application_Name }}</p>
+  <p><strong>Server Info:</strong> {{ applicationDetails.ServerInfo }}</p>
+  <p><strong>Port Info:</strong> {{ applicationDetails.PortInfo }}</p>
+  <!-- Button to delete the application -->
+  <button (click)="deleteApplication(applicationDetails.C_Id)">Delete Application</button>
+</div>
+
+<!-- Other template content -->
+

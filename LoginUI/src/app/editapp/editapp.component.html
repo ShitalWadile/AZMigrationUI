@@ -1,0 +1,53 @@
+<div class="card">
+    <div>
+      <h1>Edit Application Details</h1><hr>
+     
+    </div>
+    <div class="form">
+          <form #applicationsForm="ngForm" (ngSubmit)="onUpdate()">
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text"   class="form-control" placeholder="Id" id="id" readonly
+                 name="id" [(ngModel)]="appDetail.C_Id">
+  
+              </div>
+ 
+           
+            <div class="mb-3">
+              <label for="C_Name" class="form-label">C_Name</label>
+              <input type="text"  class="form-control" placeholder="Application Name" id="C_Name"
+               name="C_Name" [(ngModel)]="appDetail.C_Name">
+
+            </div>
+
+         
+          <div class="mb-3">
+              <label class="form-label">Application Name</label>
+              <input type="text"   class="form-control" placeholder="Application Name"
+               name="Application_Name" [(ngModel)]="appDetail.Application_Name" >
+
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Server Info</label>
+              <input type="text"  class="form-control" placeholder="Server Info"
+               name="ServerInfo" [(ngModel)]="appDetail.ServerInfo">
+
+            </div>
+
+
+            <div class="mb-3">
+              <label class="form-label">Port Info</label>
+              <input type="text"  class="form-control" placeholder="Port Info"
+               name="PortInfo" [(ngModel)]="appDetail.PortInfo">
+
+            </div>
+
+          <button  type="submit" class="btn btn-primary">ADD</button>&nbsp;
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/client">Close</button>
+        </form>
+        <!--Modal Form Ends-->
+    </div>
+  </div>
+  
+

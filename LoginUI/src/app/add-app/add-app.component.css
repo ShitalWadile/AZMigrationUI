@@ -1,0 +1,11 @@
+
+.card{
+  margin-top: 15px;
+  border: solid rgb(15, 15, 19);
+  width: 550px;
+  padding: 80px;
+  position: relative;
+  background-color:whitesmoke;
+  top: 15%;
+  left: 30%;
+}
